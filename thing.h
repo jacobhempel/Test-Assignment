@@ -2,14 +2,14 @@
  * @file
  */
 
-#ifndef _HOME_JACOB_DROPBOX_SPACEHAUC_CODE_TEST_ASSIGNMENT_THING_H_
-#define _HOME_JACOB_DROPBOX_SPACEHAUC_CODE_TEST_ASSIGNMENT_THING_H_
+#ifndef THING_H_
+#define THING_H_
 
 // Copyright 2016 Jacob Hempel
 
 
 /*!
- * This class can store a number,get a number, 
+ * This class can store a number,get a number,
  * and set a number.
  */
 class thing {
@@ -22,4 +22,4 @@ class thing {
     double storednumber;
 };
 
-#endif  // _HOME_JACOB_DROPBOX_SPACEHAUC_CODE_TEST_ASSIGNMENT_THING_H_
+#endif  // THING_H_

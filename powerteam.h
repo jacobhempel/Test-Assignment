@@ -2,13 +2,13 @@
  * @file
  */
 
-#ifndef _HOME_JACOB_DROPBOX_SPACEHAUC_CODE_TEST_ASSIGNMENT_POWERTEAM_H_
-#define _HOME_JACOB_DROPBOX_SPACEHAUC_CODE_TEST_ASSIGNMENT_POWERTEAM_H_
+#ifndef POWERTEAM_H_
+#define POWERTEAM_H_
 
 // Copyright 2016 Jacob Hempel
 
 /*!
- * This class can store a power, get a power, 
+ * This class can store a power, get a power,
  * and set a power.
  */
 class PowerTeam {
@@ -20,4 +20,4 @@ class PowerTeam {
     double power;
 };
 
-#endif  // _HOME_JACOB_DROPBOX_SPACEHAUC_CODE_TEST_ASSIGNMENT_POWERTEAM_H_
+#endif  // POWERTEAM_H_

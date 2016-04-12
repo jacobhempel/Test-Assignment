@@ -1,11 +1,11 @@
 CC = g++
-CFLAGS = -Wall -g
+CFLAGS = -Wall -g -std=c++11
 OBJECTS = main.o powerteam.o thing.o
-EXECUTABLE = powerteam 
+EXECUTABLE = powerteam
 
 powerteam: $(OBJECTS)
 	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OBJECTS)
-main.o: main.cpp powerteam.o 
+main.o: main.cpp powerteam.o
 	$(CC) $(CFLAGS) -c main.cpp -o main.o
 powerteam.o: powerteam.cpp powerteam.h
 	$(CC) $(CFLAGS) -c powerteam.cpp -o powerteam.o

@@ -7,7 +7,7 @@
 // Copyright 2016 Jacob Hempel
 
 /*!
- * This is the contructor for the PowerTeam class. 
+ * This is the contructor for the PowerTeam class.
  * It makes a PowerTeam object.
  *
  * @param defaultpower Number being stored in the powerteam object
@@ -33,4 +33,3 @@ void PowerTeam::setpower(double powerset) {
 double PowerTeam::getpower(void) {
     return power;
 }
-

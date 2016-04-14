@@ -14,6 +14,10 @@ double checkPowerLevel(std::vector<PowerTeam> batteryBank);
 void checkAllBatteries(std::vector<PowerTeam> batteryBank);
 void rechargeBatteries(std::vector<PowerTeam>* batteryBank);
 
+/*!
+ * This is a driver for the program that tests all of the functions inside
+ * the program, allowing pwoer to be pulled from the bank. and then recharged.
+ */
 int main(int argc, char* argv[]) {
     PowerTeam battery1(8.0);
     PowerTeam battery2(8.0);
@@ -31,6 +35,12 @@ int main(int argc, char* argv[]) {
     checkAllBatteries(batteryBank);
 }
 
+/*!
+ * This funtion removes power from each battery object inside the batterybank
+ * object.
+ * @param this function takes a pointer to the batterybank vector that will be
+ * pulled from
+ */
 void pullPower(std::vector<PowerTeam>* batteryBank) {
     double powerDraw;
     double initialLevel;
@@ -59,6 +69,11 @@ void pullPower(std::vector<PowerTeam>* batteryBank) {
     }
 }
 
+/*!
+ * This function checks the total power level of all batteries in the vector.
+ *@param this function takes a pointer to the batterybank to be checked
+ *@return this function returns the value of the bank
+ */
 double checkPowerLevel(std::vector<PowerTeam> batteryBank) {
     unsigned int i;
     double sum;
@@ -68,6 +83,10 @@ double checkPowerLevel(std::vector<PowerTeam> batteryBank) {
     return sum;
 }
 
+/*!
+ * This function checks the pwower levels of each individual battery in the bank
+ * @param this function takes a pointer to the batterybank to be checked
+ */
 void checkAllBatteries(std::vector<PowerTeam> batteryBank) {
     unsigned int i;
     double level;
@@ -77,6 +96,12 @@ void checkAllBatteries(std::vector<PowerTeam> batteryBank) {
     }
 }
 
+/*!
+ * This function prompts the user and asks them if they would like to recharge
+ * the batteries, and if 'y' is inputted, the batteries are recharged.
+ * @param this function takes a pointer to the batterybank vector that will be
+ * pulled from
+ */
 void rechargeBatteries(std::vector<PowerTeam>* batteryBank) {
     char yn;
     std::cout << "Would you like to recharge the batteries? (y/n)\n";

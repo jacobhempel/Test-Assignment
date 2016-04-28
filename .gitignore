@@ -1,6 +1,18 @@
-powerlint
-lineReader
-output.dat
-cpplint.py
-*.o
 powerteam
+
+# output files
+*.out
+*.o
+*.gch
+
+# linter files
+*.dat
+*.py
+lineReader
+powerlint
+
+# cmake files
+cmake_install.cmake
+CMakeFiles/
+CMakeCache.txt
+Makefile

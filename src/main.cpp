@@ -9,7 +9,7 @@
 #include "./powerteam.h"
 #include "./thing.h"
 
-void pullPower(std::vector<PowerTeam>* batteryBank);
+void pullPower(std::vector<PowerTeam>* batteryBank, double pulledPower);
 double checkPowerLevel(std::vector<PowerTeam> batteryBank);
 void checkAllBatteries(std::vector<PowerTeam> batteryBank);
 void rechargeBatteries(std::vector<PowerTeam>* batteryBank);
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
     std::cout << "This is the initial power in the batterybank: ";
     std::cout << checkPowerLevel(batteryBank) <<"\n";
     checkAllBatteries(batteryBank);
-    pullPower(&batteryBank);
+    pullPower(&batteryBank,0);
     std::cout << "This is the final power in the batterybank: ";
     std::cout << checkPowerLevel(batteryBank) <<"\n";
     checkAllBatteries(batteryBank);
@@ -41,14 +41,15 @@ int main(int argc, char* argv[]) {
  * @param this function takes a pointer to the batterybank vector that will be
  * pulled from
  */
-void pullPower(std::vector<PowerTeam>* batteryBank) {
+void pullPower(std::vector<PowerTeam>* batteryBank, double pulledPower) {
     double powerDraw;
     double initialLevel;
+    double input;
     char prompt;
-    std::cout << "how much power is required by the operation? ";
-    std::cin >> powerDraw;
+    std::cout << "How much power is required by the operation? \n";
+    std::cin >> input;
+    powerDraw=pulledPower+input;
     initialLevel = checkPowerLevel(*batteryBank);
-    std::cout << "initialLevel = " << initialLevel <<"\n";
     if (initialLevel >= powerDraw) {
         if (powerDraw <= 8) {
             (*batteryBank)[0].setpower(8.00-powerDraw);
@@ -71,7 +72,7 @@ void pullPower(std::vector<PowerTeam>* batteryBank) {
     std::cout << "will the satelite be performing another operation? (y/n) \n";
     std::cin >> prompt;
     if (prompt == 'y') {
-        pullPower(&batteryBank);
+        pullPower(batteryBank,powerDraw);
     }
 }
 

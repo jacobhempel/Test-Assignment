@@ -67,6 +67,11 @@ void pullPower(std::vector<PowerTeam>* batteryBank) {
     } else {
         std::cout << "There is not enough power in the batteries for this\n ";
     }
+    std::cout << "will the satelite be performing another operation? (y/n) \n";
+    std::cin >> prompt;
+    if (prompt == 'y') {
+        pullPower(&batteryBank);
+    }
 }
 
 /*!

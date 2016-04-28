@@ -44,6 +44,7 @@ int main(int argc, char* argv[]) {
 void pullPower(std::vector<PowerTeam>* batteryBank) {
     double powerDraw;
     double initialLevel;
+    char prompt;
     std::cout << "how much power is required by the operation? ";
     std::cin >> powerDraw;
     initialLevel = checkPowerLevel(*batteryBank);
